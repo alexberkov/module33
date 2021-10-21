@@ -7,7 +7,8 @@ template <typename T>
 double mean(vector<T> v) {
   T sum = 0;
   for (int i = 0; i < v.size(); i++) sum += v[i];
-  return ((double) sum / v.size());
+  if (!v.empty()) return ((double) sum / v.size());
+  else return sum;
 }
 
 template <typename T>
